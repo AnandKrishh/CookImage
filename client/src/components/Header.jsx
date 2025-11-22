@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <motion.div className='flex flex-col justify-center items-center text-center my-20' initial={{opacity:0.2, y:100}} transition={{duration:1}} whileInView={{opacity:1, y:0}} viewport={{once:true}}>
 
-        <motion.h1 className='text-4xl max-w-[300px] sm:text-7xl sm:max-w-[590px] mx-auto text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text'
+        <motion.h1 className='text-4xl max-w-[300px] sm:text-7xl sm:max-w-[590px] mt-10 mx-auto text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text'
         style={{
           WebkitTextFillColor: 'transparent',
           lineHeight: 1.18, 

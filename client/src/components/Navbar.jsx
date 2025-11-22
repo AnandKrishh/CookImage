@@ -1,26 +1,19 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useState, useEffect, useRef } from 'react'
 import { assets } from '../assets/assets'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { user, setShowLogin, logout, credit } = useContext(AppContext);
     const navigate = useNavigate();
-    const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const profileRef = useRef(null);
     const mobileMenuRef = useRef(null);
-
-    const navItems = [
-        { name: 'Home', path: '/' },
-        // { name: 'Gallery', path: '/gallery' },
-        // { name: 'Features', path: '/features' },   
-        // { name: 'Pricing', path: '/buy' },
-    ];
 
     const navItem = { name: 'Home', path: '/' };
 
@@ -96,30 +89,16 @@ const Navbar = () => {
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='flex items-center justify-between h-16'>
                     {/* Left side - Logo */}
-                    <Link to='/' className="flex items-center flex-shrink-0" aria-label="Imagify Home">
+                    <Link to='/' className="flex items-center flex-shrink-0" aria-label="CookImage Home">
                         <img 
                             src={assets.logo} 
-                            alt="Imagify Logo" 
+                            alt="CookImage Logo" 
                             className="w-24 sm:w-28 lg:w-32 transition-transform hover:scale-105" 
                         />
                     </Link>
 
                     {/* Center - Navigation Items */}
                     <nav className="hidden md:flex items-center space-x-1" aria-label="Main navigation">
-                        {/* {navItems.map((item) => (
-                            <Link
-                                key={item.path}
-                                to={item.path}
-                                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-                                    location.pathname === item.path
-                                    ? 'text-blue-600 bg-blue-50/50'
-                                    : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50/50'
-                                }`}
-                                aria-current={location.pathname === item.path ? 'page' : undefined}
-                            >
-                                {item.name}
-                            </Link>
-                        ))} */}
                         <Link 
                             to={navItem.path}
                             className={`px-4 py-2 ml-16 text-2xl font-medium rounded-full transition-all duration-200 text-blue-600 bg-blue-50/50`}
@@ -178,27 +157,7 @@ const Navbar = () => {
                                             <p className="text-sm font-medium text-gray-900">{user.name}</p>
                                             <p className="text-xs text-gray-500">{user.email}</p>
                                         </div>
-                                        <Link 
-                                            to="/dashboard" 
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50/50 transition-colors"
-                                            role="menuitem"
-                                        >
-                                            Dashboard
-                                        </Link>
-                                        <Link 
-                                            to="/settings" 
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50/50 transition-colors"
-                                            role="menuitem"
-                                        >
-                                            Settings
-                                        </Link>
-                                        <button 
-                                            onClick={() => navigate('/buy')} 
-                                            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50/50 transition-colors"
-                                            role="menuitem"
-                                        >
-                                            Upgrade Plan
-                                        </button>
+                                        
                                         <button 
                                             onClick={logout} 
                                             className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50/50 transition-colors"
@@ -261,20 +220,13 @@ const Navbar = () => {
                     }`}
                 >
                     <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.path}
-                                to={item.path}
-                                className={`block px-3 py-2 rounded-md text-2xl font-medium transition-colors ${
-                                    location.pathname === item.path
-                                        ? 'text-blue-600 bg-blue-50/50'
-                                        : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50/50'
-                                }`}
-                                onClick={closeMobileMenu}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                         <Link 
+                            to={navItem.path}
+                            className={`block px-3 py-2 rounded-md text-2xl font-medium transition-colors text-blue-600 bg-blue-50/50`}
+                        >
+                            {navItem.name}
+                        </Link>
+
                         {user ? (
                             <>
                                 <div className="flex items-center justify-between px-3 py-2">

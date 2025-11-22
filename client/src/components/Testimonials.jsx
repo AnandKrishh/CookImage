@@ -27,7 +27,7 @@
 //             transition={{duration: 0.6, delay: 0.1}}
 //             className='text-gray-600 text-lg'
 //           >
-//             Join thousands of satisfied creators using Imagify
+//             Join thousands of satisfied creators using CookImage
 //           </motion.p>
 //         </div>
 

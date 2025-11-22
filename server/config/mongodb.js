@@ -14,7 +14,7 @@ const connectDB = async () => {
             console.log("MongoDB Disconnected");
         });
 
-        await mongoose.connect(`${process.env.MONGODB_URI}/imagify`, {
+        await mongoose.connect(`${process.env.MONGODB_URI}/CookImage`, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
