@@ -30,13 +30,13 @@ const GenerationResult = () => {
         } else {
           console.error('Server returned error:', response.data.message);
           toast.error(response.data.message || 'Failed to load generation');
-          navigate('/dashboard');
+          navigate('/');
         }
       } catch (error) {
         console.error('Error fetching generation:', error);
         console.error('Error details:', error.response?.data);
         toast.error(error.response?.data?.message || 'Failed to load generation');
-        navigate('/dashboard');
+        navigate('/');
       } finally {
         setLoading(false);
       }
@@ -47,7 +47,7 @@ const GenerationResult = () => {
     } else {
       console.error('Missing id or token:', { id, hasToken: !!token });
       toast.error('Missing required data to fetch generation');
-      navigate('/dashboard');
+      navigate('/');
     }
   }, [id, token, backendUrl, navigate]);
 
@@ -74,7 +74,7 @@ const GenerationResult = () => {
           </ul>
           <div className="space-y-4">
             <button
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate('/')}
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 w-full"
             >
               Back to Dashboard
@@ -131,7 +131,7 @@ const GenerationResult = () => {
               Download Image
             </a>
             <button
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate('/')}
               className="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-50"
             >
               Back to Dashboard

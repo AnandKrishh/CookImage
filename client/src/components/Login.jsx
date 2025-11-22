@@ -28,7 +28,7 @@ const Login = () => {
           localStorage.setItem('token', data.token)
           window.scrollTo({ top: 0, behavior: 'smooth' });
           setShowLogin(false)
-          navigate('/dashboard')
+          navigate('/')
         } else {
           toast.error(data.message)
         }
@@ -41,7 +41,7 @@ const Login = () => {
           setUser(data.user)
           localStorage.setItem('token', data.token)
           setShowLogin(false)
-          navigate('/dashboard')
+          navigate('/')
         } else {
           toast.error(data.message)
         }

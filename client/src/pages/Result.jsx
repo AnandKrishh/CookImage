@@ -143,7 +143,7 @@ const Result = () => {
         <img src={image} alt="" className='max-w-sm rounded' />
         <span className={`absolute bottom-0 h-1 bg-blue-500 ${loading ? 'w-full transistion-all duration-[10s]' : 'w-0'}`}></span>
       </div>
-      <p className={!loading ? 'hidden' : ''}>Loading...</p>
+      <p className={!loading ? 'hidden' : ''}>Cooking...</p>
     </div>
 
     {!isImageLoaded &&

@@ -31,7 +31,7 @@ const App = () => {
     <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        {/* <Route path='/dashboard' element={isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />} /> */}
+        {/* <Route path='/' element={isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />} /> */}
         <Route path='/result' element={<Result />} />
         <Route path='/result/:id' element={isAuthenticated ? <GenerationResult /> : <Navigate to="/" replace />} />
         {/* <Route path='/buy' element={<BuyCredit />} /> */}

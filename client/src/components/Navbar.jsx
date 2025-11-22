@@ -101,7 +101,7 @@ const Navbar = () => {
                     <nav className="hidden md:flex items-center space-x-1" aria-label="Main navigation">
                         <Link 
                             to={navItem.path}
-                            className={`px-4 py-2 ml-16 text-2xl font-medium rounded-full transition-all duration-200 text-blue-600 bg-blue-50/50`}
+                            className={`px-4 py-2 text-xl font-medium rounded-full transition-all duration-200 text-blue-600 bg-blue-50/50`}
                         >
                             {navItem.name}
                         </Link>
