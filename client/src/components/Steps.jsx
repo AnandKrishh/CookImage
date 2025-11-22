@@ -37,7 +37,7 @@ const Steps = () => {
         {stepsData.map((item, index)=>(
           <motion.div 
             key={index} 
-            className='flex items-center gap-4 p-5 px-8 bg-white/20 shadow-md border rounded-lg overflow-hidden relative group'
+            className='flex items-center gap-4 p-5 px-8 bg-gray-400 shadow-md border rounded-lg overflow-hidden relative group'
             whileHover={{ 
               scale: 1.02,
               transition: { duration: 0.2 }
@@ -59,7 +59,7 @@ const Steps = () => {
               >
                 {item.title}
               </motion.h2>
-              <p className='text-gray-500 group-hover:text-gray-700 transition-colors duration-300'>
+              <p className='text-gray-200 group-hover:text-gray-700 transition-colors duration-300'>
                 {item.description}
               </p>
             </div>

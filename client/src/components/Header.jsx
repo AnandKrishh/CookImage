@@ -34,9 +34,9 @@ const Header = () => {
         // initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.4, duration:2}}
         >Your text gets cooked into image</motion.h1>
 
-        <motion.p className='text-center max-w-xl mx-auto mt-5' initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay:0.6, duration:0.8}}>Turn your thoughts into pictures with a single promp</motion.p>
+        <motion.p className='text-center text-neutral-400 max-w-xl mx-auto mt-5' initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay:0.6, duration:0.8}}>Turn your thoughts into pictures with a single promp</motion.p>
 
-        <motion.button onClick={onClickHandler} className='sm:text-lg text-white bg-black w-auto mt-8 px-6 py-2.5 flex items-center gap-2 rounded-full cursor-pointer' whileHover={{scale:1.05}} whileTap={{scale:0.95}} initial={{opacity:0}} animate={{opacity:1}} transition={{default:{duration:0.5}, opacity:{delay:0.8, duration:1}}}>Cook Images
+        <motion.button onClick={onClickHandler} className='sm:text-lg text-white bg-gray-900 w-auto mt-8 px-6 py-2.5 flex items-center gap-2 rounded-full cursor-pointer' whileHover={{scale:1.05}} whileTap={{scale:0.95}} initial={{opacity:0}} animate={{opacity:1}} transition={{default:{duration:0.5}, opacity:{delay:0.8, duration:1}}}>Cook Images
             <img className='h-6' src={assets.star_group} alt="" />
         </motion.button>
         
@@ -57,7 +57,7 @@ const Header = () => {
         initial={{opacity:0}}
         animate={{opacity:1}}
         transition={{delay:1.2, duration:0.8}}
-         className='mt-2 text-neutral-600'>Cooked images from CookImage</motion.p>
+         className='mt-2 text-neutral-200'>Cooked images from CookImage</motion.p>
 
     </motion.div>
   )

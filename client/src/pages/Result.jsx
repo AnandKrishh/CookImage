@@ -143,7 +143,7 @@ const Result = () => {
         <img src={image} alt="" className='max-w-sm rounded' />
         <span className={`absolute bottom-0 h-1 bg-blue-500 ${loading ? 'w-full transistion-all duration-[10s]' : 'w-0'}`}></span>
       </div>
-      <p className={!loading ? 'hidden' : ''}>Cooking...</p>
+      <p className={!loading ? 'hidden' : 'text-gray-300'}>Cooking...</p>
     </div>
 
     {!isImageLoaded &&
@@ -159,7 +159,7 @@ const Result = () => {
       <div className='flex gap-5 flex-wrap justify-center text-white text-sm p-0.5 mt-10 rounded-full'>
   
           <p onClick={()=>{setIsImageLoaded(false)}} 
-          className='bg-transparent border border-zinc-900 text-black px-8 py-3 rounded-full cursor-pointer'>Generate Another</p>
+          className='bg-gray-300 border border-zinc-900 text-black px-8 py-3 rounded-full cursor-pointer hover:scale-104'>Generate Another</p>
           <CustomDropdown format={format} setFormat={setFormat} formats={["JPEG", "PNG", "WebP", "SVG"]}></CustomDropdown>
           </div>
           <div className="flex sm:justify-end justify-center mt-5 p-0.5 text-white">
@@ -168,7 +168,7 @@ const Result = () => {
                 e.preventDefault();
                 await convertImage(image,format);
               }}
-              className="w-40 bg-zinc-900 px-10 py-3 rounded-full cursor-pointer"
+              className="w-40 bg-gray-900 hover:scale-104 px-10 py-3 rounded-full cursor-pointer"
             >
               Download
             </div>

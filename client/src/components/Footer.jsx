@@ -6,12 +6,12 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-white">
+        <footer className="bg-gray-300">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
                 <div className="flex flex-col justify-center items-center text-center">
                     {/* Brand Section */}
                     <div className="flex flex-col justify-center items-center text-center">
-                        <div className="flex items-center gap-2 mb-3">
+                        <div className="flex items-center gap-2 mb-2"> {/**/}
                             <img src={assets.logo_icon} alt="" className="w-6 h-6" />
                             <span className="text-lg font-medium">CookImage</span>
                         </div>

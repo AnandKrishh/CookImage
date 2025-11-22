@@ -85,9 +85,9 @@ const Navbar = () => {
     };
 
     return (
-        <nav className='sticky top-0 z-40 bg-white/80 backdrop-blur-md shadow-sm' id='nav-bar' role="navigation">
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                <div className='flex items-center justify-between h-16'>
+        <nav className='sticky top-0 z-40 bg-gray-300 backdrop-blur-md shadow-sm' id='nav-bar' role="navigation">
+            <div className='max-w-8xl mx-auto px-4 sm:px-6 lg:px-8'>
+                <div className='flex items-center justify-between  h-16'>
                     {/* Left side - Logo */}
                     <Link to='/' className="flex items-center flex-shrink-0" aria-label="CookImage Home">
                         <img 
@@ -110,7 +110,7 @@ const Navbar = () => {
                     {/* Right side - Auth & Actions */}
                     <div className="flex items-center space-x-4">
                         {user ? (
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center">
                                 <button 
                                     onClick={() => navigate('/result')}
                                     className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-blue-50/50 text-blue-600 rounded-full hover:bg-blue-100/50 transition-colors duration-200"
