@@ -11,7 +11,7 @@ const AppContextProvider = (props) => {
 
     const [credit, setCredit] = useState(false)
 
-    const backendUrl = "http://localhost:5000"
+    const backendUrl = "https://cookimage-server.onrender.com"
 
     const navigate = useNavigate()
 
